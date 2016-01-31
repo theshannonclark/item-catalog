@@ -1,6 +1,9 @@
 # Mac OS X Finder metadata
 .DS_Store
 
+# Vagrant folder
+.vagrant/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
