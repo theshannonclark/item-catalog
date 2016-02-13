@@ -5,18 +5,47 @@
    ========================================================================== */
 
 
+.body-content {
+	margin-bottom: 5%;
+	margin-top: 3%;
+}
 
+.navbar-booktraq {
+	margin: 0;
+	box-shadow: none;
+}
 
+.booktraq-login {
+	margin: 5px;
+}
 
+h1.booktraq-title {
+	font-size: 3em;
+	margin-left: 25%;
+	margin-top: 25%;
+	font-weight: normal;
+}
 
+.booktraq-subtitle {
+	margin-left: 25%;
+}
 
+.book-tile {
+	min-height: 200px;
+}
 
+/* ==========================================================================
+   Debugging styles
+   ========================================================================== */
 
+.debug-border-red {
+	border: 1px solid red;
+}
 
+.debug-border-blue {
+	border: 1px solid blue;
+}
 
-
-
-
-
-
-
+.debug-border-green {
+	border: 1px solid green;
+}
