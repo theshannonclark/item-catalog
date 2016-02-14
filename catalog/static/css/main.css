@@ -10,13 +10,37 @@
 	margin-top: 3%;
 }
 
+.body-content a {
+	color: black;
+}
+
 .navbar-booktraq {
 	margin: 0;
 	box-shadow: none;
+	background: #e3dfba;
+	border: none;
+}
+
+.jumbotron-booktraq {
+	background: #e3dfba;
 }
 
 .booktraq-login {
 	margin: 5px;
+	background: none;
+	border: none;
+	box-shadow: none;
+	color: #3d2706;
+}
+
+.booktraq-login:hover {
+	background: none;
+	border: none;
+}
+
+h1.booktraq-title,
+.booktraq-subtitle {
+	color: #3d2706;
 }
 
 h1.booktraq-title {
@@ -30,8 +54,62 @@ h1.booktraq-title {
 	margin-left: 25%;
 }
 
+h2.section {
+	color: #3d2706;
+	font-size: 2em;
+	font-weight: normal;
+}
+
 .book-tile {
 	min-height: 200px;
+	width: 180px;
+}
+
+.book-cover {
+	height: 200px;
+	width: 150px;
+	background: #eee;
+}
+
+.book-cover + a {
+	display: inline-block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+ul.category-list {
+	list-style: none;
+}
+
+ul.category-list li {
+	margin-bottom: 0.5em;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 768px) {
+	h1.booktraq-title,
+	.booktraq-subtitle {
+		margin: 0;
+	}
+
+	.booktraq-subtitle {
+		width: 50%;
+		margin-left: 25%;
+	}
+
+	.body-content {
+		width: 50%;
+		min-width: 200px;
+		margin: 0 auto;
+	}
+
+	.book-tile {
+		margin-bottom: 1em;
+	}
 }
 
 /* ==========================================================================

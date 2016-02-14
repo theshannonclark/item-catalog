@@ -24,28 +24,20 @@
         <nav class="navbar navbar-default navbar-static-top navbar-booktraq" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
                     <a class="btn btn-default navbar-left booktraq-login" href="#">log in</a>
-                </div><!--/.navbar-collapse -->
+                </div>
             </div>
         </nav>
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
+        <div class="jumbotron jumbotron-booktraq">
             <div class="container">
                 <div class="col-sm-4 col-sm-offset-1 text-center">
                     <h1 class="booktraq-title">booktraq</h1>
                     <p class="booktraq-subtitle">track your reading habits, and grow your reading list using booktraq</p>
                 </div>
 
-                <div class="col-sm-6">
+                <div class="col-sm-6 hidden-xs">
                     <img class="img img-responsive" src="../static/images/booksheader.png" />
                 </div>
             </div>
@@ -54,25 +46,62 @@
         <div class="container">
             <!-- Example row of columns -->
             <div class="row body-content">
-                <div class="col-sm-4 debug-border-red text-center">
-                    <h2>Categories</h2>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <h2 class="section">Categories</h2>
+                    <ul class="category-list">
+                        <li><a href="#">Arts &amp; Photography</a></li>
+                        <li><a href="#">Biographies &amp; Memoirs</a></li>
+                        <li><a href="#">Classics</a></li>
+                        <li><a href="#">Fantasy</a></li>
+                        <li><a href="#">Horror</a></li>
+                        <li><a href="#">Historical Fiction</a></li>
+                        <li><a href="#">Mystery, Thriller &amp; Suspense</a></li>
+                        <li><a href="#">Romance</a></li>
+                        <li><a href="#">Science Fiction</a></li>
+                        <li><a href="#">Travel</a></li>
+                        <li><a href="#">Young Adult</a></li>
+                    </ul>
                 </div>
 
-                <div class="col-sm-8 debug-border-green">
-                    <h2>Recently Added Books</h2>
+                <div class="col-sm-8">
+                    <h2 class="section">Recently Added Books</h2>
                     <div class="row">
-                        <div class="col-sm-3 debug-border-blue book-tile"></div>
-                        <div class="col-sm-3 debug-border-blue book-tile"></div>
-                        <div class="col-sm-3 debug-border-blue book-tile"></div>
-                        <div class="col-sm-3 debug-border-blue book-tile"></div>
+                        <div class="col-sm-3 book-tile">
+                            <div class="book-cover"></div>
+                            <a href="#">Book title</a>
+                        </div>
+                        <div class="col-sm-3 book-tile">
+                            <div class="book-cover"></div>
+                            <a href="#">Book title</a>
+                        </div>
+                        <div class="col-sm-3 book-tile">
+                            <div class="book-cover"></div>
+                            <a href="#">Book title</a>
+                        </div>
+                        <div class="col-sm-3 book-tile">
+                            <div class="book-cover"></div>
+                            <a href="#">Book title</a>
+                        </div>
                     </div>
 
-                    <h2>Most Popular</h2>
+                    <h2 class="section">Most Popular</h2>
                     <div class="row">
-                        <div class="col-sm-3 debug-border-blue book-tile"></div>
-                        <div class="col-sm-3 debug-border-blue book-tile"></div>
-                        <div class="col-sm-3 debug-border-blue book-tile"></div>
-                        <div class="col-sm-3 debug-border-blue book-tile"></div>
+                        <div class="col-sm-3 book-tile">
+                            <div class="book-cover"></div>
+                            <a href="#">Book title</a>
+                        </div>
+                        <div class="col-sm-3 book-tile">
+                            <div class="book-cover"></div>
+                            <a href="#">Book title</a>
+                        </div>
+                        <div class="col-sm-3 book-tile">
+                            <div class="book-cover"></div>
+                            <a href="#">Book title</a>
+                        </div>
+                        <div class="col-sm-3 book-tile">
+                            <div class="book-cover"></div>
+                            <a href="#">Book title</a>
+                        </div>
                     </div>
                 </div>
             </div>
