@@ -1,6 +1,6 @@
 import sys
 
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, String, Text, Date
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import relationship
@@ -13,17 +13,20 @@ class Category(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
 
-    items = relationship("Item", order_by="Item.id", back_populates="category")
+    books = relationship("Book", order_by="Book.id", back_populates="category")
 
-class Item(Base):
-    __tablename__ = 'item'
+class Book(Base):
+    __tablename__ = 'book'
 
     id = Column(Integer, primary_key=True)
-    name = Column(String(80), nullable=False)
-    description = Column(String(250))
+    title = Column(String(250), nullable=False)
+    author = Column(String(250))
+    publisher = Column(String(250))
+    published = Column(Date)
+    description = Column(Text)
     category_id = Column(Integer, ForeignKey('category.id'))
 
-    category = relationship("Category", back_populates="items")
+    category = relationship("Category", back_populates="books")
 
 engine = create_engine('postgresql:///catalog')
 Base.metadata.create_all(engine)

@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 #from sqlalchemy import create_engine
 #from sqlalchemy.orm import sessionmaker
-#from database_setup import Base, Category, Item
+#from database_setup import Base, Category, Book
 
 #engine = create_engine('postgresql:///catalog')
 #Base.metadata.bind = engine
