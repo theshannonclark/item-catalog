@@ -1,9 +1,11 @@
 import sys
 
-from sqlalchemy import Column, ForeignKey, Integer, String, Text, Date
+from sqlalchemy import Column, ForeignKey, Integer, String, Text, Date, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import relationship
+
+import datetime
 
 Base = declarative_base()
 
@@ -24,6 +26,8 @@ class Book(Base):
     publisher = Column(String(250))
     published = Column(Date)
     description = Column(Text)
+    created_at = Column(DateTime, default=datetime.datetime.now)
+    updated_at = Column(DateTime, onupdate=datetime.datetime.now)
     category_id = Column(Integer, ForeignKey('category.id'))
 
     category = relationship("Category", back_populates="books")

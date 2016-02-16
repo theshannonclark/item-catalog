@@ -58,17 +58,17 @@
                 <div class="col-sm-8">
                     <h2 class="section">Recently Added Books</h2>
                     <div class="row">
-                        {% for book in books %}
+                        {% for book in recent %}
                             <div class="col-sm-3 book-tile">
                                 <div class="book-cover"></div>
-                                <a href="#">{{ book.name }}</a>
+                                <a href="#">{{ book.title }}</a>
                             </div>
                         {% endfor %}
                     </div>
 
                     <h2 class="section">Most Popular</h2>
                     <div class="row">
-                        {% for book in books %}
+                        {% for book in popular %}
                             <div class="col-sm-3 book-tile">
                                 <div class="book-cover"></div>
                                 <a href="#">{{ book.name }}</a>
