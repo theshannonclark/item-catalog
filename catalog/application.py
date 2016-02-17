@@ -15,6 +15,7 @@ session = DBSession()
 def home():
 	categories = session.query(Category).order_by(Category.name).all()
 	recent_books = session.query(Book).order_by(desc(Book.created_at))[0:5]
+
 	return render_template("index.html", categories=categories, recent=recent_books)
 
 if __name__ == '__main__':
