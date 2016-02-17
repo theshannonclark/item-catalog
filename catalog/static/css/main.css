@@ -25,6 +25,10 @@
 	background: #e3dfba;
 }
 
+.jumbotron-category {
+	height: 15em;
+}
+
 .booktraq-login {
 	margin: 5px;
 	background: none;
@@ -38,16 +42,19 @@
 	border: none;
 }
 
-h1.booktraq-title,
-.booktraq-subtitle {
-	color: #3d2706;
+h1.title {
+	font-size: 3em;
 }
 
-h1.booktraq-title {
-	font-size: 3em;
+h1.title,
+.booktraq-subtitle {
+	color: #3d2706;
+	font-weight: normal;
+}
+
+h1.main-title {
 	margin-left: 25%;
 	margin-top: 25%;
-	font-weight: normal;
 }
 
 .booktraq-subtitle {

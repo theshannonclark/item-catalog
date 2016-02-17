@@ -1,14 +1,9 @@
 {% extends "layout.html" %}
 {% block content %}
-        <div class="jumbotron jumbotron-booktraq">
+        <div class="jumbotron jumbotron-booktraq jumbotron-category">
             <div class="container">
-                <div class="col-sm-4 col-sm-offset-1 text-center">
-                    <h1 class="title main-title">booktraq</h1>
-                    <p class="booktraq-subtitle">track your reading habits, and grow your reading list using booktraq</p>
-                </div>
-
-                <div class="col-sm-6 hidden-xs">
-                    <img class="img img-responsive" src="../static/images/booksheader.png" />
+                <div class="col-sm-6 col-sm-offset-3 text-center">
+                    <h1 class="title category-title">{{ category }}</h1>
                 </div>
             </div>
         </div>
@@ -25,22 +20,12 @@
                 </div>
 
                 <div class="col-sm-8">
-                    <h2 class="section">Recently Added Books</h2>
+                    <h2 class="section">{{ category }} Books</h2>
                     <div class="row">
-                        {% for book in recent %}
+                        {% for book in books %}
                             <div class="col-sm-3 book-tile">
                                 <div class="book-cover"></div>
                                 <a href="#" class="truncate" title='{{ book.title }}'>{{ book.title }}</a>
-                            </div>
-                        {% endfor %}
-                    </div>
-
-                    <h2 class="section">Most Popular</h2>
-                    <div class="row">
-                        {% for book in popular %}
-                            <div class="col-sm-3 book-tile">
-                                <div class="book-cover"></div>
-                                <a href="#">{{ book.name }}</a>
                             </div>
                         {% endfor %}
                     </div>
@@ -48,4 +33,3 @@
             </div>
         </div> <!-- /container -->
 {% endblock %}
-

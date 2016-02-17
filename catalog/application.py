@@ -18,6 +18,19 @@ def home():
 
 	return render_template("index.html", categories=categories, recent=recent_books)
 
+@app.route('/catalog/<category>')
+def category(category):
+	categories = session.query(Category).order_by(Category.name).all()
+	selected = session.query(Category).filter_by(slug = category).one()
+	selected_name = selected.name
+	books = selected.books
+
+	return render_template("category.html", category=selected_name, categories=categories, books=books)
+
+@app.route('/catalog/')
+def nope():
+	return redirect(url_for('home'))
+
 if __name__ == '__main__':
     app.debug = True
     app.run(host = '0.0.0.0', port = 8000)
