@@ -14,16 +14,16 @@ session = DBSession()
 
 # Create categories
 
-arts = Category(name='Arts & Photography')
-biographies = Category(name='Biographies & Memoirs')
-classics = Category(name='Classics')
-fantasy = Category(name='Fantasy')
-horror = Category(name='Horror')
-historical = Category(name='Historical Fiction')
-mystery = Category(name='Mystery, Thriller & Suspense')
-scifi = Category(name='Science Fiction')
-travel = Category(name='Travel')
-ya = Category(name='Young Adult')
+arts = Category(name='Arts & Photography', slug='arts-photography')
+biographies = Category(name='Biographies & Memoirs', slug='biographies-memoirs')
+classics = Category(name='Classics', slug='classics')
+fantasy = Category(name='Fantasy', slug='fantasy')
+horror = Category(name='Horror', slug='horror')
+historical = Category(name='Historical Fiction', slug='historical-fiction')
+mystery = Category(name='Mystery, Thriller & Suspense', slug='mystery-thriller-suspense')
+scifi = Category(name='Science Fiction', slug='science-fiction')
+travel = Category(name='Travel', slug='travel')
+ya = Category(name='Young Adult', slug='young-adult')
 
 # Add some books
 
