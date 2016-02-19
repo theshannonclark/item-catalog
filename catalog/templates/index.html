@@ -30,7 +30,7 @@
                         {% for book in recent %}
                             <div class="col-sm-3 book-tile">
                                 <div class="book-cover"></div>
-                                <a href="#" class="truncate" title='{{ book.title }}'>{{ book.title }}</a>
+                                <a href="{{ url_for('item', book_id=book.id) }}" class="truncate" title='{{ book.title }}'>{{ book.title }}</a>
                             </div>
                         {% endfor %}
                     </div>
@@ -40,7 +40,7 @@
                         {% for book in popular %}
                             <div class="col-sm-3 book-tile">
                                 <div class="book-cover"></div>
-                                <a href="#">{{ book.name }}</a>
+                                <a href="{{ url_for('item', book_id=book.id) }}">{{ book.name }}</a>
                             </div>
                         {% endfor %}
                     </div>

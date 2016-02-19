@@ -27,6 +27,15 @@ def category(category):
 
 	return render_template("category.html", category=selected_name, categories=categories, books=books)
 
+@app.route('/catalog/book/<int:book_id>')
+def item(book_id):
+	book = None
+	book_list = session.query(Book).filter_by(id = book_id).all()
+	if len(book_list) == 1:
+		book = book_list[0]
+
+	return render_template("item.html", book=book)
+
 @app.route('/catalog/')
 def nope():
 	return redirect(url_for('home'))
