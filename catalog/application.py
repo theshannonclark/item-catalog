@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, abort
 app = Flask(__name__)
 
 from sqlalchemy import create_engine, desc
@@ -21,9 +21,12 @@ def home():
 @app.route('/catalog/<category>')
 def category(category):
 	categories = session.query(Category).order_by(Category.name).all()
-	selected = session.query(Category).filter_by(slug = category).one()
-	selected_name = selected.name
-	books = selected.books
+	selected = [c for c in categories if c.slug == category]
+	if len(selected) == 1:
+		selected_name = selected[0].name
+		books = selected[0].books
+	else:
+		abort(404)
 
 	return render_template("category.html", category=selected_name, categories=categories, books=books)
 
@@ -33,6 +36,8 @@ def item(book_id):
 	book_list = session.query(Book).filter_by(id = book_id).all()
 	if len(book_list) == 1:
 		book = book_list[0]
+	else:
+		abort(404)
 
 	return render_template("item.html", book=book)
 
