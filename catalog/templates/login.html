@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+        <div class="container">
+            <div class="row body-content">
+                <div class="col-sm-2 col-sm-offset-5">
+	                <div class="google-button">
+	                    <div id="signInButton" data-state="{{ state }}">
+	                        <span class="g-signin"
+	                            data-scope="openid email"
+	                            data-clientid="930996386325-fvga514h1ool1gq8273fqpnvlsoqp3eh.apps.googleusercontent.com"
+	                            data-redirecturi="postmessage"
+	                            data-accesstype="offline"
+	                            data-cookiepolicy="single_host_origin"
+	                            data-callback="signInCallback"
+	                            data-approvalprompt="force">
+	                        </span>
+	                    </div>
+	                </div>
+                </div>
+
+                <div id="loginResult"></div>
+            </div>
+        </div> <!-- /container -->
+{% endblock %}

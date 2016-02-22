@@ -11,11 +11,17 @@
         <meta name="description" content="Keep track of which books you've read using booktraq.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- bootstrap styles -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}">
+        <!-- custom styles -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
+        <!-- modernizr -->
         <script src="{{ url_for('static', filename='js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
+
+        <!-- google oauth -->
+        <script src="//apis.google.com/js/platform.js?onload=start"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -26,7 +32,6 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="/">booktraq</a>
                 </div>
-                <a class="btn btn-default navbar-right booktraq-login" href="#">log in</a>
             </div>
         </nav>
         {% block content %}{% endblock %}
